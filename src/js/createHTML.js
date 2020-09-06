@@ -1,10 +1,10 @@
 export default function createHTML(teg, quantity) {
-	const arrayElements = [];
+	const perentElement = document.querySelector('.table-game');
+
 	for (let i = 0; i < quantity; i++) {
 		let element = document.createElement(teg);
 		element.classList.add('cell');
-		arrayElements.push(element);
-	};
 
-	return arrayElements;
+		perentElement.insertAdjacentElement("beforeend", element);
+	};
 }
